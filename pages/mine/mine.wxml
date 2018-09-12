@@ -1,0 +1,41 @@
+<view class='img-container'>
+    <view class="container">
+        <view  class="mine-img">
+            <image src='{{avatarUrl}}'></image>
+        </view>
+        <view class='nickName'>{{nickName}}</view>
+        <view>{{cellPhone}}</view>
+    </view>
+</view>
+<view class="mine-nav">
+    <view class="list">
+        <!-- <view class="list-item border-bottom arrow-right">
+            <navigator url='../mine-info/mine-info' hover-class="none" class="list-item-link">
+                <text class="icon zhanghaoicon"></text>
+                <text class="list-item-name">个人信息</text>
+            </navigator>
+        </view> -->
+        <view class="list-item border-bottom arrow-right">
+            <navigator url='../myOrder/myOrder' hover-class="none" open-type='redirect' class="list-item-link">
+                <text class="icon wodedingdan"></text>
+                <text class="list-item-name">我的订单</text>
+            </navigator>
+        </view>
+        <view class="list-item border-bottom arrow-right">
+            <view class="list-item-link" bindtap='ServiceTel'>
+                <text class="icon zhanghaoicon"></text>
+                <text class="list-item-name">客服电话</text>
+                <text class='ServiceTel'>13220161900</text>
+            </view>
+        </view>
+        <!-- <view class="list-item border-bottom arrow-right">
+            <navigator url='../changePassword/changePassword' hover-class="none" class="list-item-link">
+                <text class="icon xiugaizhanghao"></text>
+                <text class="list-item-name">修改密码</text>
+            </navigator>
+        </view> -->
+    </view>
+</view>
+
+
+<authorization id='authorization' footerSelect='0' bind:TabFooterNav="_TabFooterNav"></authorization>

@@ -1,0 +1,255 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<swiper class="travel-activity" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+    <block wx:for="{{activity.movies}}" wx:key="index">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image" data-src='{{item}}' bindtap="previewImage" mode="aspectFill" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="activity-detail">
+    <view class='activity-title'>{{activity.actName}}</view>
+    <block wx:if="{{nowData - actDeadLine > 0 }}">
+        <text class="em danger">名额紧张</text>
+    </block>
+    <block wx:elif='{{nowData - activity.actDeadLine < 0 }}'>
+        <text class='em danger' wx:if='{{activity.totalNum - activity.applicants == 0}}'>名额已满</text>
+        <text class='em danger' wx:elif='{{activity.totalNum - activity.applicants <= 5}}'>名额紧缺</text>
+        <text class='em' wx:elif='{{activity.totalNum - activity.applicants > 5}}'>名额充足</text>
+    </block>
+    <text class="em warning">精选路线</text>
+    <text class="em warning">特惠</text>
+    <view class="activity-price">
+        <view>
+            <text class='text-span'><text class='text-b'>{{activity.tranFee}}</text>元／人</text>
+            <text class='text-span prepaid'>预付{{activity.preaidFee}}元/人</text>
+        </view>
+        <view>
+            <text class='text-span'>浏览次数：<text class="paddL6">{{activity.browseTimes}}</text></text>
+            <text class='text-span timespan'>报名截止：<text class="paddL6 timespan" style='color:{{nowData - activity.actDeadLine < 0?"#999":"red"}}'>{{timespan}}</text></text>
+        </view>
+    </view>
+</view>
+<view class="activity-sponsor">
+    <view>组织者：{{custUser.alias}}(主领队)
+        <text class="fR">报名上线：{{custUser.ledPersonNum}}人</text>
+    </view>
+    <view>电 话：{{custUser.phone}}
+        <text class="fR">微信号：{{custUser.wechat}}</text>
+    </view>
+</view>
+<view class="summary">
+    <view class="headerbox" bindtap='tabSwitch1'>
+        <view class='header-title'>活动详情</view>
+        <view class="toggle {{tabSwitch1?'rotate':'rotate1'}}"></view>
+    </view>
+    <view class="contentBox {{tabSwitch1?'':'acco_content'}}">
+        <view class="text">
+            <template is="wxParse" data="{{wxParseData:summary.nodes}}" />
+        </view>
+    </view>
+</view>
+<view class="summary">
+    <view class="headerbox" bindtap='tabSwitch2'>
+        <view class='header-title'>行程安排</view>
+        <view class="toggle {{tabSwitch2?'rotate':'rotate1'}}"></view>
+    </view>
+    <view class="contentBox {{tabSwitch2?'':'acco_content'}}">
+        <template is="wxParse" data="{{wxParseData:scheduling.nodes}}" />
+        <view class='journey' style='display:none'>
+            <view class="journey-item work">
+                <text>Day1</text>
+                <view>北京</view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    2018.12.15（周六）07:40-07:45 海淀五路居地铁站A口停靠。自行电话联系领队或者根据公众号上车辆信息找车，请成员提前5-10分钟到达上车地点，迟到不等，如需更换上车地点请及时联系领队）。
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    07:45 集合完毕，出发，开往下马威（迟到不等，迟到不等，迟到不等）。
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    10:30-11:10 开始爬山。
+                    <view class="imgcontent">
+                        <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclqoyC-AH3QCAARJouu-2B8289.jpg' mode="aspectFill"></image>
+                    </view>
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    11:10-12:10 徒步至垭口。
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    12:10-13:00 找地方午餐，分享美食。
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    13:00-14:30 行走于高山草甸，向东灵山之巅进发。
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    13:00-14:30 行走于高山草甸，向东灵山之巅进发。
+                    <view class="imgcontent">
+                        <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclqoyC-AH3QCAARJouu-2B8289.jpg' mode="aspectFill"></image>
+                    </view>
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    14:30-18:00 沿东灵山景区路线下山
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    18:00 集合，休整，乘车返程
+                </view>
+            </view>
+            <view class='journey-item'>
+                <view class="circle"></view>
+                <view class="content">
+                    21:00 到达北京市区，依次抵达海淀五路居、牡丹园地铁站，顺利解散，自由聚餐腐败（遇堵车等延后）。
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="summary">
+    <view class="headerbox" bindtap='tabSwitch3'>
+        <view class='header-title'>装备要求</view>
+        <view class="toggle {{tabSwitch3?'rotate':'rotate1'}}"></view>
+    </view>
+    <view  class="contentBox {{tabSwitch3?'':'acco_content'}}">
+        <template is="wxParse" data="{{wxParseData:equipped.nodes}}" />
+    </view>
+    <view class="contentBox {{tabSwitch3?'':'acco_content'}}"  style='display:none'>
+        <view class="text">
+            <text style="color: #ff5662">特别提醒 ：</text> 山上天气变幻莫测，北京夏季容易落雨，备好雨衣、冲锋衣/厚衣服备用；登山杖，护膝最好都带上，爬升较陡！！！
+            <view class="equipments">
+                <view class='equipments-li'>1、头部：帽子、墨镜、魔术面巾</view>
+                <view class='equipments-li'>2、上衣：轻薄透气快干衣物；</view>
+                <view class='equipments-li'>3、裤子：运动长裤（以防被草木割伤、被蚊虫叮咬）；</view>
+                <view class='equipments-li'>4、脚部：合脚的的登山鞋或厚底防滑运动鞋，运动中筒 袜，不可穿皮鞋、凉鞋、高跟鞋、薄底鞋；</view>
+                <view class='equipments-li'>
+                    5、户外装备：
+                    <view class='equipments-ol'>
+                        <view class='equipments-li'>①护膝——下山缓解冲击；</view>
+                        <view class='equipments-li'>②登山杖——抓地、支撑、减震、省力；</view>
+                        <view class='equipments-li'>③双肩包——省力、方便；</view>
+                        <view class='equipments-li'>④雨衣——以备不时之需；</view>
+                        <view class='equipments-li'>⑤手电——以备天气突变和天黑后下山；</view>
+                        <view class='equipments-li'>⑥食品、1-2.5L水，酌情多带；</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="summary">
+    <view class="headerbox" bindtap='tabSwitch4'>
+        <view class='header-title'>费用说明</view>
+        <view class="toggle {{tabSwitch4?'rotate':'rotate1'}}"></view>
+    </view>
+    <view class="contentBox {{tabSwitch4?'cost':'acco_content'}}">
+        <template is="wxParse" data="{{wxParseData:feeExplain.nodes}}" />
+    </view>
+    <view class="contentBox {{tabSwitch4?'cost':'acco_content'}}" style='display:none'>
+        <view class='cost-title'>[ 费用包含 ]</view>
+        <view class='cost-ul'>
+            <view class='cost-li'>1、交通：往返车费；</view>
+            <view class='cost-li'>2、活动组织费；</view>
+            <view class='cost-li'>3、保险：赠送1日户外保险，不提供正确身份证号码的人员，视为放弃该项权益，并手写声明在参加活动时交给领队。</view>
+        </view>
+        <view class='cost-title'>[ 费用不含 ]</view>
+        <view class='cost-ul'>
+            <view class='cost-li'>1、进山费：如遇村民收取进山费，大家自行砍价AA，人均10元左右；</view>
+            <view class='cost-li'>2、自备午餐、水等；</view>
+            <view class='cost-li'>3、门票：穿越路线原则上没有门票费用，如遇景区查票，大家砍价AA补票，人均15-30元；</view>
+            <view class='cost-li'>4、意外险：自行购买意外险。</view>
+            <view class='cost-li'>注：以上费用不含部分自行AA。</view>
+        </view>
+        <view class='cost-title'>[ 退款说明 ]</view>
+        <view class='cost-ul'>
+            <view class='cost-li'>本活动开始时间为2018-06-30 07:15，退款截止时间为1天，超过截止时间系统将无法申请退款并按以下规定收取违约金：</view>
+            <view class='cost-li'>1、北京集合：行程前300日至2日退款，收取费用总额（费用包含）0％的违约金；行程前1日至0日退款，收取费用总额（费用包含）100％的违约金;</view>
+            <view class='cost-li'>2、其它省市集合：行程前300日至3日退款，收取费用总额（费用包含）0％的违约金；行程前2日至2日退款，收取费用总额（费用包含）50％的违约金；行程前1日至0日退款，收取费用总额（费用包含）100％的违约金。</view>
+        </view>
+    </view>
+</view>
+<view view class="summary" style='margin-bottom: 130rpx;'>
+    <view class="headerbox" bindtap='tabSwitch5'>
+        <view class='header-title'>报名人员</view>
+        <view class="toggle {{tabSwitch5?'rotate':'rotate1'}}"></view>
+    </view>
+    <view class="contentBox {{tabSwitch5?'':'acco_content'}}">
+        <view class='participant'>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+            <view class='participant-item'>
+                <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclr24qeAP1CQAACIj4-Dgs4522.jpg' mode="aspectFill"></image>
+                <view>万贡献</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="commentsTool">
+    <view class="comments-options">
+        <view>
+            <view class="mu-buttom-item-wrapper">
+                <text class="mu-bottom-item-icon collection"></text>
+                <text class="mu-bottom-item-text">收藏</text>
+            </view>
+        </view>
+        <view>
+            <button class="mu-buttom-item-wrapper" open-type="share">
+                <text class="mu-bottom-item-icon forwarding"></text>
+                <text class="mu-bottom-item-text">转发</text>
+            </button>
+        </view>
+        <block wx:if='{{activityTerminate}}'>
+            <view class="terminate" bindtap='ActivitiesTermination'>
+                <view>报名已截止</view>
+            </view>
+        </block>
+        <block wx:elif='{{!activityTerminate}}'>
+            <view class="say" bindtap='participation'  data-url='../activityEnrollment/activityEnrollment?activityId={{activityId}}&tranFee={{activity.tranFee}}&preaidFee={{activity.preaidFee}}'>
+                <view class='navigator'>我要报名</view>
+            </view>
+        </block>
+
+    </view>
+</view>

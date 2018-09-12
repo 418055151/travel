@@ -1,0 +1,281 @@
+page{
+    background: #f2f2f2;
+}
+.activity-item {
+    display: block;
+    margin-bottom: 10rpx;
+    padding: 30rpx;
+    background: white;
+}
+.activity-item .item-img {
+    width: 20%;
+    height: 140rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    vertical-align: top;
+}
+.activity-item .item-img image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.activity-item .item-take {
+    width: 76%;
+    display: inline-block;
+    position: relative;
+}
+.activity-item .item-take .activity-title{
+    font-size: 28rpx;
+    color: #333;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.activity-price {
+    font-size: 0;
+    zoom: 1;
+    padding-top: 20rpx;
+}
+.activity-price view {
+    line-height: 40rpx;
+}
+.activity-price .text-span {
+    color: #858385;
+    font-size: 20rpx;
+}
+.activity-price .text-b {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #3bc983;
+    padding-right:10rpx;
+    vertical-align: middle;
+}
+.activity-price text.prepaid {
+    color: #3bc983;
+    padding-left: 20rpx;
+    font-size: 20rpx;
+}
+.activity-sponsor {
+    background-color: #ebfff5;
+    padding: 20rpx 30rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+.activity-sponsor view{
+    text-align: left;
+    color: #333;
+    font-size: 28rpx;
+    line-height: 64rpx;
+}
+view.Cost-info {
+    display: block;
+    margin-bottom: 10rpx;
+    padding: 30rpx;
+    background: white;
+}
+view.Cost-info {
+    color: #999999;
+    font-size: 28rpx;
+}
+view.Cost-info .info-title{
+    margin-bottom: 10rpx;
+    color: #3bc983;
+}
+view.Cost-info .info-msg {
+    color: #000;
+    font-size: 28rpx;
+    line-height: 52rpx;
+}
+.total {
+    color: #ff0000;
+}
+view.Cost-info .info-msg .num {
+    position: relative;
+    height: 52rpx;
+    width: 220rpx;
+    float: right;
+    border: 2rpx solid #f2f2f2;
+}
+view.Cost-info .info-msg .num text {
+    position: absolute;
+    top: 0;
+    width: 64rpx;
+    height: 52rpx;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    line-height: 52rpx;
+    color: #675959;
+}
+view.Cost-info .info-msg .num text.reduce {
+    left: 0;
+    border-right: 2rpx solid #f2f2f2;
+}
+view.Cost-info .info-msg .num text.number {
+    position: absolute;
+    top: 4rpx;
+    left: 70rpx;
+    width: 76rpx;
+    height: 46rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 48rpx;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    border: none;
+}
+view.Cost-info .info-msg .num text.add {
+    right: 0;
+    border-left: 2rpx solid #f2f2f2;
+}
+view.Cost-info .warmPrompt{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+}
+.registration-info{
+
+}
+.registration-info .info-title{
+    color: #3bc983;
+    padding: 30rpx 30rpx 0;
+    background: white;
+    font-size: 28rpx;
+}
+.registration-info .tourists-item {
+    width: 100%;
+    display: block;
+}
+.registration-info .tourists-item .tourists-item-li {
+    background: white;
+    margin-bottom: 10rpx;
+    padding: 0 30rpx 30rpx;
+}
+.tourists-item .tourists-item-li .tourists-item-title {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 64rpx;
+    padding: 10rpx 0;
+    border-bottom: 2rpx solid #f2f2f2;
+}
+.tourists-item .tourists-item-li .item {
+    border-bottom: 2rpx solid #f2f2f2;
+    line-height: 72rpx;
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+}
+.tourists-item .tourists-item-li .item .text-label {
+    font-size: 28rpx;
+    color: #333;
+    font-weight: 600;
+}
+.tourists-item .tourists-item-li .long-input {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    float: right;
+    border: none;
+    height: 72rpx;
+    line-height: 72rpx;
+    margin-right: 20rpx;
+    text-align: right;
+    color: #333;
+    background: transparent;
+    font-size: 28rpx;
+}
+.tourists-item .tourists-item-li .iconimg {
+    display: block;
+    position: absolute;
+    top: 26rpx;
+    right: -15rpx;
+    background: url(https://www.mxlgsl.cn/static/images/wechat/right-icon.png)no-repeat;
+    background-size: 100% 100%;
+    width: 20rpx;
+    height: 20rpx;
+    overflow: hidden;
+}
+.commentsTool {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow:0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    box-shadow: 0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    background: #FFFFFF;
+    z-index: 990;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+}
+.commentsTool .comments-options {
+    color: #302e2e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    min-height:100rpx;
+}
+.commentsTool .comments-options view {
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 32rpx;
+    line-height: 100rpx;
+}
+.totalprices {
+    font-size: 32rpx;
+    color: #3bd484;
+}
+.totalprices .text-i{
+    font-size: 44rpx;
+    vertical-align: middle;
+    padding-left: 10rpx;
+    font-family: fantasy;
+    font-weight: bold;
+}
+.commentsTool .comments-options view.say {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    color: white;
+    background-image: -webkit-linear-gradient(135deg, #acd14d, #3bd484);
+    background-image: linear-gradient(135deg, #acd14d, #3bd484);
+    font-size: 0.3103448275862069rem;
+    font-weight: bold;
+    height: 108rpx;
+    line-height: 108rpx;
+}
+.commentsTool .comments-options view.say .activityEnrollment {
+    display: block;
+    font-size: 32rpx;
+}
+.m-search-page .gender{
+    background: #f1f1f1;
+}
+.m-search-page .gender view{
+    text-align: center;
+    padding: 5px 0;
+    line-height: 30px;
+    border-bottom: 1px solid #f2f0f0;
+    background: #fff;
+    position: relative;
+}
+.m-search-page .gender view.cancel {
+    margin-top: 10px;
+    border: none;
+}
+.showBlock{
+    height:110rpx;
+    display:block;
+    background:#f2f2f2;
+}

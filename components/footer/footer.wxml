@@ -1,0 +1,10 @@
+<view class='footer'>
+    <view class='mu-bottom-nav-shift-wrapper'>
+        <view class="mu-buttom-item {{index == footerSelect?'active':''}}" wx:for='{{footerNav}}' wx:key='index' data-index='{{index}}' data-url='{{item.url}}' data-id='{{item.navId}}' catchtap='_TabFooterNav'>
+            <view class="mu-buttom-item-wrapper">
+                <text class="mu-bottom-item-icon {{item.icon}}"></text>
+                <text class="mu-bottom-item-text">{{item.navTitle}}</text>
+            </view>
+        </view>
+    </view>
+</view>

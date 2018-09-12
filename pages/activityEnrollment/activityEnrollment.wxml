@@ -1,0 +1,106 @@
+<view class="activity-item">
+    <view class="item-img">
+        <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclqoyC-AH3QCAARJouu-2B8289.jpg' mode="aspectFill"></image>
+    </view>
+    <view class="item-take">
+        <view class='activity-title'>2018.12.15 玉龙湾滑雪活动</view>
+        <view class="activity-price">
+            <view>
+                <text class='text-span'><text class='text-b'>188</text>元／人</text>
+                <text class="text-span prepaid">预付100元/人</text>
+            </view>
+            <view>
+                <text class='text-span'>报名状态：<text class='paddL6'>名额紧张</text></text>
+                <text style="padding-left:20rpx " class='text-span'>报名截止：<text class="paddL6 timespan">{{timespan}}</text></text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="activity-sponsor">
+    <view>
+    组织者：天空之城(主领队) <text class="fR">报名上线：30人</text>
+    </view>
+    <view>
+    电 话：13833256458 <text class="fR">微信号：star0716</text>
+    </view>
+</view>
+<view class="Cost-info">
+    <view class='info-title'>费用信息</view>
+    <view class="info-msg">
+        预付费 ：<text class="ReferenceNumber">{{univalence}}</text>*<text class='Multiple'>{{num}}</text>=<text class='total'>{{univalence*num}}</text>元
+    </view>
+    <view class="info-msg">
+        报名人数 ：
+        <view class="num">
+            <text class="reduce taphover removeclass" bindtouchstart='minus'>-</text>
+            <text class='number'>{{num}}</text>
+            <text class="add taphover" bindtouchstart='add'>+</text>
+        </view>
+    </view>
+    <view class='warmPrompt'>温馨提示：本活动于2018年12月15日开始，开始前一天不能退出，退出者不退还预付</view>
+</view>
+<view class="registration-info">
+    <view class='info-title'>报名信息</view>
+    <view class="tourists-item">
+        <view class='tourists-item-li' wx:for='{{apply}}' wx:key='index'>
+            <view class='tourists-item-title'>填写第{{index+1}}位报名人信息</view>
+            <view class="item">
+                <text class='text-label'>真实姓名：</text>
+                <input class="long-input Realname" data-index='{{index}}' bindinput='Realname' type="text"/>
+            </view>
+            <view class="item">
+                 <text class='text-label'>性　　别：</text>
+                 <input class="long-input gender" data-index='{{index}}' bindtap='gender' value="{{item.gender}}" type="text" disabled='true'/>
+                 <text class="iconimg"></text>
+            </view>
+            <view class="item">
+                <text class='text-label'>证件类型：</text>
+                <input class="long-input voucher" data-index='{{index}}' bindtap='voucher' value="{{item.voucher}}" type="text" disabled='true'/>
+                 <text class="iconimg"></text>
+            </view>
+            <view class="item">
+                <text class='text-label'>证件号码：</text>
+                <input class="long-input IDNumber" data-index='{{index}}' bindinput='IDNumber' type="text"/>
+            </view>
+            <view class="item">
+                <text class='text-label'>手机号码：</text>
+                <input class="long-input Mobilephone" data-index='{{index}}' bindinput='Mobilephone'  type="number"/>
+            </view>
+            <view class="item">
+                <text class='text-label'>上车地点：</text>
+                <input class="long-input position" data-index='{{index}}' bindinput='position'  type="text"/>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='showBlock'></view>
+<view class="commentsTool">
+    <view class="comments-options">
+        <view>
+            <text class="totalprices">¥<text class='text-i'>{{univalence*num}}</text></text>
+        </view>
+        <view class="say">
+            <text class='activityEnrollment' bindtap='activityEnrollment'>我要报名</text>
+        </view>
+    </view>
+</view>
+<view class="search-mask">
+    <view class="m-search-page {{genderMask?'':'z-open'}}">
+        <view class='gender'>
+            <view class="selected" data-value='男' bindtap='selectedGender'>男</view>
+            <view class="selected" data-value='女' bindtap='selectedGender'>女</view>
+            <view class="cancel" bindtap='cancel'>取消</view>
+        </view>
+    </view>
+    <view class="m-search-mask {{genderMask?'mask-open':''}}" bindtap='cancel'></view>
+</view>
+<view class="search-mask">
+    <view class="m-search-page {{voucherMask?'':'z-open'}}">
+        <view class='gender'>
+            <view class="selected" data-value='身份证' bindtap='selectedVoucher'>身份证</view>
+            <view class="selected" data-value='护照' bindtap='selectedVoucher'>护照</view>
+            <view class="cancel" bindtap='cancel'>取消</view>
+        </view>
+    </view>
+    <view class="m-search-mask {{voucherMask?'mask-open':''}}" bindtap='cancel'></view>
+</view>

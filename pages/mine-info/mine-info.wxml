@@ -1,0 +1,72 @@
+<view class="travel-main-part" wx:if='{{!imageFixed}}'>
+    <view class="Headportrait">
+        <view class="container">
+            <view class="mine-img" bindtap='mine_img' data-which='1'>
+                <image  src="https://y.gtimg.cn/music/photo_new/T002R300x300M000000cwbRr3rUNph.jpg?max_age=2592000"></image>
+                <view>点击更换头像</view>
+            </view>
+        </view>
+    </view>
+    <view class="travel-problem-account">
+        <view class="travel-input-container clearfix">
+            <text class="fL travel-Verification">昵称</text>
+            <input type='text' value="{{nickname}}" bindinput="nickname" />
+        </view>
+    </view>
+    <view class="travel-problem-account">
+        <view class="travel-input-container clearfix">
+            <text class="fL travel-Verification">性别</text>
+            <input style='margin-right: 30rpx;' type='text' disabled='ture' value='{{gender}}' bindtap="maskopen" />
+            <text class="iconimg"></text>
+        </view>
+    </view>
+    <view class="travel-problem-account">
+        <view class="travel-input-container clearfix">
+            <text class="fL travel-Verification">手机号</text>
+            <input class="cell-phone" type='text' value='更改绑定' disabled='ture' bindtap='ChangeBinding'/>
+            <view class="list-item-des">185*****276</view>
+        </view>
+    </view>
+    <view class="travel-button">
+        <button bindtap='travel_button'>确   认</button>
+    </view>
+</view>
+<view class='search-mask'>
+    <view class='m-search-page {{searchMask?"":"z-open"}}'>
+        <view class='view-ul'>
+            <view class='gender' bindtap='gender' data-gender='男'>男</view>
+            <view class='gender' bindtap='gender' data-gender='女'>女</view>
+            <view class='cancel' bindtap='cancel'>取消</view>
+        </view>
+    </view>
+    <view class='m-search-mask {{searchMask?"mask-open":""}}' bindtap='cancel'></view>
+</view>
+<view class='fixed-upimg' wx:if="{{imageFixed}}">
+    <view class="wx-content-info">
+        <view wx:if="{{isShowImg}}" class="wx-corpper" style="width:{{cropperInitW}}rpx;height:{{cropperInitH}}rpx;background:#000">
+            <view bindtap='upLoad' class="wx-corpper-content" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx;left:{{cropperL}}rpx;top:{{cropperT}}rpx">
+                <image src="{{imageSrc}}" style="width:{{cropperW}}rpx;height:{{cropperH}}rpx"></image>
+                <view class="wx-corpper-crop-box" bindtouchstart="contentStartMove" bindtouchmove="contentMoveing" style="width:{{cutW}}rpx;height:{{cutH}}rpx;left:{{cutL}}rpx;top:{{cutT}}rpx">
+                    <view class="wx-cropper-view-box">
+                        <view class="wx-cropper-dashed-h"></view>
+                        <view class="wx-cropper-dashed-v"></view>
+                        <view class="wx-cropper-line-t" data-drag="top" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-line-r" data-drag="right" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-line-b" data-drag="bottom" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-line-l" data-drag="left" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-t" data-drag="top" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-tr" data-drag="topTight"></view>
+                        <view class="wx-cropper-point point-r" data-drag="right" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-b" data-drag="bottom" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-bl" data-drag="bottomLeft"></view>
+                        <view class="wx-cropper-point point-l" data-drag="left" catchtouchstart="dragStart" catchtouchmove="dragMove"></view>
+                        <view class="wx-cropper-point point-lt" data-drag="leftTop"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <canvas canvas-id="myCanvas" style="position:absolute;border: 1px solid red; width:{{imageW}}rpx;height:{{imageH}}rpx;top:-9999px;left:-9999px;"></canvas>
+        <button type="primary" bindtap="getImageInfo" style="position:fixed;bottom:120rpx;width:90%;left:50%;transform:translate3d(-50%,0,0);border-radius:0;background-color:#3bc983;color:#fff;"> 保存 </button>
+    </view>
+</view>

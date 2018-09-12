@@ -1,0 +1,81 @@
+page{
+    background: white;
+}
+.MemberLoginBox{
+    padding: 80rpx 50rpx;
+    text-align: center;
+}
+.logoimage{
+    width: 200rpx;
+    height: 120rpx;
+}
+.MemberLoginBtnBox{
+    margin: 100rpx auto 100rpx;
+}
+.MemberLoginBtnBox button{
+    border-radius: 6rpx;
+    margin-bottom: 50rpx;
+    font-size: 32rpx;
+    line-height: 95rpx;
+}
+.getPhoneNumber{
+    background: #3385ff;
+    color: white;
+}
+.getUserInfo{
+    background: #38ca84;
+    color: white;
+}
+.MessageAuthenticationLogin{
+    background: white;
+}
+.AuthenticationLogin{
+    background: white;
+    border-top-left-radius: 20rpx;
+    border-top-right-radius: 20rpx;
+    padding: 0 50rpx 80rpx;
+}
+.AuthenticationLogin_title{
+    font-size: 32rpx;
+    text-align: center;
+    position: relative;
+    padding: 40rpx 0 0;
+}
+.warning_msg{
+    text-align: center;
+    color: red;
+    line-height: 48rpx;
+    font-size: 20rpx;
+    margin-bottom: 10rpx;
+}
+.PhoneNumberinput,.MessageAuthenticationinput{
+    background: #f7f7f7;
+    margin-bottom: 40rpx;
+    position: relative;
+}
+.PhoneNumberinput input{
+    padding: 20rpx 40rpx;
+    font-size: 28rpx;
+}
+.MessageAuthenticationinput input{
+padding: 20rpx 240rpx 20rpx 40rpx;
+    font-size: 28rpx;
+}
+.getMessageAuthentication{
+    position: absolute;
+    top: 18rpx;
+    right: 22rpx;
+    font-size: 26rpx;
+    padding: 8rpx 20rpx;
+    border: 2rpx solid #3385ff;
+    color: #3385ff;
+    background-color:white;
+    border-radius: 8rpx;
+}
+.login_btn{
+    background: #38ca84;
+    text-align: center;
+    line-height: 84rpx;
+    color: white;
+    border-radius: 8rpx;
+}

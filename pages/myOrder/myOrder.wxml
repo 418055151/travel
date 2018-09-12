@@ -1,0 +1,64 @@
+<progress percent="{{progress}}" color="#3bc983" stroke-width="5" activeColor="#3bc983" backgroundColor="#fff" />
+<view class='tui-countdown-content' wx:for="{{countDownList}}" wx:key="countDownList">
+  剩余
+  <text class='tui-conutdown-box'>{{item.day}}</text>天
+  <text class='tui-conutdown-box'>{{item.hou}}</text>时
+  <text class='tui-conutdown-box'>{{item.min}}</text>分
+  <text class='tui-conutdown-box tui-countdown-bg'>{{item.sec}}</text>秒
+</view>
+<view class='OrderList'>
+    <view class='item-list' wx:for='{{dataList}}' wx:if='{{dataList.length > 0}}'>
+        <view class="Ordernumber">
+            订单编号：
+            <text class='order-number'>201812060021</text>
+            <text class="fR daifukuan">待付款</text>
+        </view>
+        <view class="activity-item">
+            <view class="item-img">
+                <image src='http://image.ichengda.xin//group1/M00/00/03/L13rcltDX8yAdBqUAAGlygsuF5c907.jpg' mode="aspectFill"></image>
+            </view>
+            <view class="item-take">
+                <view class='item-name'>Apple 苹果 iPhone 6s Plus (A1699) 16G 玫瑰金色 移动联通电信4G 全网通手机</view>
+                <view class="activity-price">
+                    <view>
+                        <text><text class='unit-price'>188</text>元／人</text>
+                        <text class="prepaid">预付100元/人</text>
+                    </view>
+                    <view>
+                        <text>报名状态：<text class="paddL6">名额紧张</text></text>
+                        <text style="padding-left: 20rpx">报名截止：<text class="paddL6 timespan">20天13时8分47秒</text></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="tool-btn clearfix">
+            <navigator url='../test/test' class="fR payment">去付款</navigator>
+            <button class="fR delete" bindtap='DeleteOrder'>删除订单</button>
+        </view>
+    </view>
+    <block wx:if='{{dataList.length > 0}}'>
+        <view class='Lazyload' wx:if='{{!datamsg}}'>
+            <image class='Lazyload-imgse' src='../../imgse/5-121204193955-51.gif'></image>加载中...
+        </view>
+        <view wx:if='{{datamsg}}' class='no-data-text active'> ───── 已经到底了 ─────</view>
+    </block>
+
+    <view class='mescroll-empty' wx:if='{{dataList.length == 0}}'>
+        <image src='http://test.mxlgsl.cn/static//images/wechat/mescroll-empty.png' class="empty-icon" mode="aspectFill"></image>
+        <view class="empty-tip">》_《||| 抱歉这里没有东西~</view>
+        <navigator url='../index/index' class="empty-btn" open-type="reLaunch">跳转到首页</navigator>
+    </view>
+</view>
+
+<dialog id='dialog' bind:TabFooterNav="_TabFooterNav" footerSelect='1'></dialog>
+<view class="search-mask">
+    <view class="m-search-page  {{searchMask?'':'z-open'}}">
+        <view class="warning-text">
+            <text class="cancel" bindtap='cancel'>取消</text> 确认移除此订单吗?
+        </view>
+        <view class="warning-btn">
+            <text>确认移除</text>
+        </view>
+    </view>
+    <view bindtap='cancel' class="m-search-mask {{searchMask?'mask-open':''}}"></view>
+</view>

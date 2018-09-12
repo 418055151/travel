@@ -1,0 +1,63 @@
+<view class="activity-sponsor">
+    <view>订单已提交，请在
+        <text class="member"><text class='minute'>{{clock}}</text></text>分钟内完成网上支付，否则系统将自动取消本次交易。
+    </view>
+</view>
+<view class="activity-item">
+    <view class="item-img">
+        <image src='http://image.ichengda.xin/group1/M00/00/02/L13rclqoyC-AH3QCAARJouu-2B8289.jpg' mode="aspectFill"></image>
+    </view>
+    <view class="item-take">
+        <view class='activity-title'>2018.12.15 玉龙湾滑雪活动</view>
+        <view class="activity-price">
+            <view>
+                <text class='text-span'><text class='text-b'>188</text>元／人</text>
+                <text class="text-span prepaid">预付100元/人</text>
+            </view>
+            <view>
+                <text class='text-span'>报名状态：<text class='paddL6'>名额紧张</text></text>
+                <text style="padding-left:20rpx " class='text-span'>报名截止：<text class="paddL6 timespan">{{timespan}}</text></text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="Cost-info">
+    <view class='info-title'>费用信息</view>
+    <view class="info-msg">
+        预付费 ：
+        <text class="ReferenceNumber">180</text>*
+        <text class='Multiple'>2</text>=
+        <text class='total'>360</text>元
+    </view>
+    <view class="info-msg">
+        报名人数 ：
+        <text class="member">2</text>人
+    </view>
+    <view class='warmPrompt'>温馨提示：本活动于2018年12月15日开始，开始前一天不能退出，退出者不退还预付</view>
+</view>
+<view class="Payment-way">
+    <view class='info-title'>支付方式</view>
+    <view class="table-view">
+        <view class="table-view-cell" wx:for='{{model}}' bindtap='selectClick' wx:key='index' id="{{index}}" data-PaymentWay='{{item.PaymentWay}}'>
+            <view class='view-a'>
+                <image class="media-object" src='{{item.image}}' mode="aspectFill"></image>
+                <view class="media-body">
+                    {{item.title}}
+                    <view class="mui-ellipsis">{{item.sub_title}}</view>
+                </view>
+            </view>
+            <view class="StudyTime {{item.selectImage?'checkbox':''}}"></view>
+        </view>
+    </view>
+</view>
+<view class='showBlock'></view>
+<view class="commentsTool">
+    <view class="comments-options">
+        <view>
+            <text class="totalprices">¥<text class='text-i'>360</text></text>
+        </view>
+        <view class="say">
+            <text class='activityEnrollment' bindtap='payment'>确认支付</text>
+        </view>
+    </view>
+</view>

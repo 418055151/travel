@@ -1,0 +1,411 @@
+@import"../../wxParse/wxParse.wxss";
+button{
+    border: none;
+}
+.travel-activity {
+    height: 410rpx;
+    width: 100%;
+}
+
+.travel-activity image {
+    height: 100%;
+    width: 100%;
+}
+
+.activity-detail {
+    font-size: 0;
+    margin-top: 10rpx;
+    padding: 20rpx 30rpx;
+}
+
+.activity-detail .activity-title {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 48rpx;
+    font-weight: bold;
+}
+
+.activity-detail .em {
+    display: inline-block;
+    color: #3bc983;
+    border: 2rpx solid #3bc983;
+    padding: 0 8rpx;
+    margin-right: 4rpx;
+    border-radius: 30rpx;
+    font-size: 20rpx;
+    margin-bottom: 10rpx;
+}
+
+.activity-detail text.danger {
+    color: #ff4352;
+    border: 2rpx solid #ff4352;
+}
+
+.activity-detail text.warning {
+    color: #ffa903;
+    border: 2rpx solid #ffa903;
+}
+
+.activity-price {
+    font-size: 0;
+    zoom: 1;
+    padding: 20rpx 0 10rpx;
+}
+
+.activity-price view {
+    line-height: 40rpx;
+}
+
+.activity-price .text-span {
+    color: #999;
+    font-size: 24rpx;
+}
+
+.activity-price .text-b {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #3bc983;
+    padding-right: 10rpx;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.activity-price text.prepaid {
+    color: #3bc983;
+    padding-left: 12rpx;
+    font-size: 24rpx;
+}
+.activity-price text.timespan{
+        padding-left: 12rpx;
+    font-size: 24rpx;
+}
+
+.paddL6 {
+    padding-left: 12rpx;
+}
+
+.activity-sponsor {
+    background-color: #ebfff5;
+    padding: 16rpx 30rpx;
+    font-weight: bold;
+}
+
+.activity-sponsor view {
+    line-height: 54rpx;
+    text-align: left;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.contentBox {
+    height: auto;
+    display: block;
+    -webkit-transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
+}
+
+.acco_content {
+    height: 0;
+    -webkit-transition: height 1s ease-in-out;
+    transition: height 0.5s ease-in-out;
+    overflow: hidden;
+}
+
+.headerbox {
+    position: relative;
+    height: auto;
+    font-size: 32rpx;
+    z-index: 10;
+}
+
+.headerbox .header-title {
+    color: white;
+    font-weight: bold;
+    line-height: 68rpx;
+    padding-left: 16rpx;
+    position: relative;
+    border-left: 8rpx solid sandybrown;
+    background-image: url(https://www.mxlgsl.cn/static/images/wechat/Group.png);
+    background-size: 100% 68rpx;
+}
+
+.rotate {
+    transform-origin: center 10rpx;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: transform 0.2s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    -ms-transition: -ms-transform 0.6s;
+}
+
+.rotate1 {
+    transform-origin: center 10rpx;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: transform 0.2s;
+    -moz-transition: -moz-transform 0.6s;
+    -o-transition: -o-transform 0.6s;
+    -ms-transition: -ms-transform 0.6s;
+}
+
+.headerbox .toggle {
+    position: absolute;
+    top: 30rpx;
+    right: 30rpx;
+    background: url(https://www.mxlgsl.cn/static/images/wechat/tel-icon.png)no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    display: block;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.contentBox view.text, .contentBox view.text {
+    color: #333;
+    font-size: 28rpx;
+    padding: 30rpx;
+    line-height: 60rpx;
+}
+
+.journey {
+    margin: 60rpx 40rpx 40rpx;
+    padding-left: 20rpx;
+    border-left: 2rpx solid #cfcfcf;
+    position: relative;
+    border-top: 2rpx solid #cfcfcf;
+}
+
+.journey .journey-item {
+    position: relative;
+    margin-top: 30rpx;
+    font-size: 28rpx;
+    color: #333;
+}
+
+.journey view.work {
+    position: absolute;
+    width: 100%;
+    background: white;
+    top: -24rpx;
+    margin: 0;
+}
+
+.journey view.work text {
+    font-size: 24rpx;
+    padding: 4rpx 12rpx;
+    border-radius: 30rpx;
+    background-color: #ffa900;
+    color: white;
+}
+
+.journey view.work view {
+    padding-left: 10rpx;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.journey .journey-item .circle {
+    top: 15rpx;
+    left: -24rpx;
+    width: 10rpx;
+    height: 10rpx;
+    background: #ffa900;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+}
+
+.journey .imgcontent image {
+    margin-top: 20rpx;
+    width: 100%;
+}
+
+.equipments {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.equipments .equipments-li {
+    line-height: 64rpx;
+}
+
+.equipments .equipments-li .equipments-ol {
+    margin-left: 40rpx;
+}
+
+.cost {
+    padding: 30rpx;
+}
+
+.cost .cost-title {
+    color: #ff5662;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cost .cost-ul {
+    margin-bottom: 60rpx;
+    color: #333;
+    font-size: 28rpx;
+}
+
+.cost .cost-ul .cost-li {
+    line-height: 64rpx;
+}
+
+.cost .cost-ul:last-child {
+    margin: 0;
+}
+
+.participant {
+    margin: 30rpx;
+    display: block;
+}
+
+.participant .participant-item {
+    width: 19%;
+    font-size: 28rpx;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    vertical-align: top;
+    color: #797979;
+    zoom: 1.1;
+    position: relative;
+    margin-bottom: 10rpx;
+}
+
+.participant .participant-item image {
+    display: inline-block;
+    border-radius: 50%;
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.participant .participant-item view {
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 8rpx auto 0;
+}
+
+.commentsTool {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow: 0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    box-shadow: 0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    background: #fff;
+    z-index: 990;
+}
+
+.commentsTool .comments-options, .commentsTool .comments-input {
+    color: #302e2e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.commentsTool .comments-options view {
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 32rpx;
+    line-height: 88rpx;
+}
+
+.mu-buttom-item-wrapper {
+    padding: 3px 0;
+    display: block;
+    height: 100%;
+    background: #fff;
+}
+.mu-buttom-item-wrapper:after{
+    border: none;
+}
+.mu-bottom-item-icon {
+    width: 22px;
+    height: 24px;
+    display: block;
+    margin: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: url(http://test.mxlgsl.cn/static/images/wechat/Path.png);
+    background-repeat: no-repeat;
+}
+
+.comments-options .collection {
+    background-position: 0 0;
+}
+
+.comments-options .forwarding {
+    background-position: 0 -29px;
+}
+
+.mu-bottom-item-text {
+    display: block;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    line-height: 40rpx;
+    font-size: 28rpx;
+    color: #000;
+    font-weight: 500;
+}
+
+.commentsTool .comments-options view.say {
+    height: 108rpx;
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+    color: white;
+    background-image: -webkit-linear-gradient(135deg, #acd14d, #3bd484);
+    background-image: linear-gradient(135deg, #acd14d, #3bd484);
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.commentsTool .comments-options view.terminate {
+    height: 108rpx;
+    -webkit-box-flex: 4;
+    -ms-flex: 4;
+    flex: 4;
+    color: #f1f1f1;
+    background-image: -webkit-linear-gradient(135deg, #e8e7e3, #888887);
+    background-image: linear-gradient(135deg, #e8e7e3, #888887);
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.commentsTool .comments-options view.say view.navigator {
+    display: block;
+    width: 100%;
+    height: 110rpx;
+    line-height: 110rpx;
+}
+.commentsTool .comments-options view.terminate view {
+    display: block;
+    width: 100%;
+    height: 110rpx;
+    line-height: 110rpx;
+}
+

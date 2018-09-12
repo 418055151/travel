@@ -1,0 +1,62 @@
+
+<scroll-view class="nav" scroll-x="true" scroll-left="{{scrollLeft}}">
+    <view class="{{index == catalogSelect?'active':''}}" wx:for="{{indexNav}}" wx:key='index' data-index='{{index}}' data-id='{{item.navId}}' bindtap='TabNav'>{{item.navTitle}}</view>
+</scroll-view>
+<swiper class="coursecontainer" current="{{catalogSelect}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+
+    <swiper-item wx:for="{{indexNav}}" wx:key='index'>
+        <scroll-view scroll-y="true" enable-back-to-top='true' class="activity" bindscrolltoupper="{{loadMore ? '_DownRefresh' : ' '}}" bindscrolltolower="{{loadMore ? 'onReachBottom' : ' '}}" lower-threshold="10" style="height:{{winHeight}}rpx" bindscroll="scrollHide">
+            {{item.datamsg}}
+            <block wx:for="{{item.activity}}" wx:key="index">
+                <view class="item-list">
+                    <navigator hover-class="none" url='../activityDetails/activityDetails?id={{item.id}}&actDeadLineString={{item.actDeadLineString}}'>
+                        <view class="activity-img">
+                            <image wx:if="{{showIndex + 3 > index && showIndex - 2 < index}}" src='{{imagesUrl}}{{item.images[0].url}}' mode="aspectFill"></image>
+                            <view class="activity-label">
+                                <view>{{item.destination}}</view>
+                                <!-- <view>露营</view> -->
+                            </view>
+                        </view>
+                        <view class="activity-introduce">
+                            <view class="activity-describe">
+                                <view class='activity-name'>{{item.actName}}</view>
+
+                                <block wx:if="{{nowData - item.actDeadLine > 0 }}">
+                                    <text>报名已截止</text>
+                                </block>
+                                <block wx:elif='{{nowData - item.actDeadLine < 0 }}'>
+                                    <text wx:if='{{item.totalNum - item.applicants == 0}}'>名额已满</text>
+                                    <text wx:elif='{{item.totalNum - item.applicants <= 5}}'>名额紧缺</text>
+                                    <text wx:elif='{{item.totalNum - item.applicants > 5}}'>名额充足</text>
+                                </block>
+                                <text class="handpick">精选路线</text>
+                                <text class="handpick">特惠</text>
+                            </view>
+                            <view class="activity-price">
+                                <text class='price'>
+                                    <text class='unit-price'>{{item.tranFee}}</text>元／人
+                                </text>
+                            </view>
+                        </view>
+                    </navigator>
+                </view>
+            </block>
+            <block wx:if='{{!item.emptyData}}'>
+                <view class='Lazyload' wx:if='{{!item.datamsg}}'>
+                    <image class='Lazyload-imgse' lazy-load='true' src='../../imgse/timg.gif'></image>
+                    加载中...
+                </view>
+                <view wx:elif='{{item.datamsg}}' class='no-data-text active'> ───── 已经到底了 ─────</view>
+            </block>
+            <block wx:if='{{item.emptyData}}'>
+                <view class='mescroll-empty'>
+                    <image src='http://test.mxlgsl.cn/static//images/wechat/mescroll-empty.png' class="empty-icon" mode="aspectFill"></image>
+                    <view class="empty-tip">》_《||| 抱歉这里没有东西~</view>
+                    <navigator hover-class="none" url='../index/index' class="empty-btn" open-type="reLaunch">跳转到首页</navigator>
+                </view>
+            </block>
+        </scroll-view>
+    </swiper-item>
+</swiper>
+
+<authorization id='authorization' footerSelect='0' bind:TabFooterNav="_TabFooterNav"></authorization>

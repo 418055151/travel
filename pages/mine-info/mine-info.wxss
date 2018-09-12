@@ -1,0 +1,494 @@
+.travel-main-part {
+    margin: 0 60rpx;
+    padding-top: 40rpx;
+}
+.Headportrait {
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 2rpx solid #e2e2e2;
+    padding-bottom: 50rpx;
+    margin-bottom: 16rpx;
+}
+.container {
+    display: block;
+    width: 202rpx;
+    padding: 20rpx 0 0;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+.container view {
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: bold;
+    font-family: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}
+.mine-img image {
+    width: 180rpx;
+    height: 180rpx;
+    border: 4rpx solid #fff;
+    border-radius: 50%;
+}
+.mine-img view {
+    width: 202rpx;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 28rpx;
+    color: #999;
+    margin-top: 10rpx;
+}
+.travel-problem-account {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10rpx;
+    position: relative;
+}
+.travel-input-container {
+    border-bottom: 2rpx solid #e2e2e2;
+    display: flex;
+}
+.travel-input-container {
+    position: relative;
+}
+.travel-input-container span.fL {
+    font-size: 28rpx;
+    line-height: 80rpx;
+    width: 160rpx;
+    text-align: left;
+    color: #333;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.travel-input-container text.fL {
+    line-height: 80rpx;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.travel-main-part input {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    z-index: 10;
+    background: transparent;
+    color: #999999;
+    height: 80rpx;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    zoom: 1;
+}
+.travel-main-part input {
+    height: 72rpx;
+    text-align: right;
+    font-size: 28rpx;
+}
+.iconimg {
+    display: block;
+    position: absolute;
+    top: 30rpx;
+    right: 0px;
+    background: url(https://www.mxlgsl.cn/static/images/wechat/right-icon.png)no-repeat;
+    background-size: 100% 100%;
+    width: 20rpx;
+    height: 20rpx;
+    overflow: hidden;
+}
+.travel-main-part input.cell-phone {
+    color: #81b8ff;
+    font-size: 28rpx;
+    font-weight: bold;
+}
+.list-item-des {
+    position: absolute;
+    left: 50%;
+    margin-left: -70rpx;
+    font-size: 28rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    color: #999999;
+}
+.travel-button {
+    margin: 110rpx auto 0;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+.travel-button button{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    zoom: 1.1;
+    display: block;
+    background: #3bc983;
+    border-radius: 50rpx;
+    color: white;
+    line-height: 65rpx;
+    font-size: 28rpx;
+}
+.search-mask {
+    z-index: 10000;
+}
+.m-search-page {
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10002;
+    width: 100%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.search-mask .m-search-page.z-open {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+}
+.m-search-page .view-ul {
+    background: #f1f1f1;
+}
+.m-search-page .view-ul view {
+    display: block;
+    text-align: center;
+    padding: 12rpx 0;
+    line-height: 56rpx;
+    border-bottom: 2rpx solid #f2f0f0;
+    background: #fff;
+    position: relative;
+    font-size: 28rpx;
+}
+.m-search-page .view-ul view.cancel {
+    margin-top: 18rpx;
+    border: none;
+}
+.m-search-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: rgba(0,0,0,.3);
+    opacity: 0;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+}
+.m-search-mask.mask-open {
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+    opacity: 1;
+    z-index: 10001;
+}
+
+.fixed-upimg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+.wx-content-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wx-corpper {
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    box-sizing: border-box;
+}
+
+.wx-corpper-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.wx-corpper-content image {
+    display: block;
+    width: 100%;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 100%;
+    min-height: 0 !important;
+    max-height: none !important;
+    image-orientation: 0deg !important;
+    margin: 0 auto;
+}
+
+/* 移动图片效果 */
+
+.wx-cropper-drag-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: move;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* 内部的信息 */
+
+.wx-corpper-crop-box {
+    position: absolute;
+    width: 500rpx;
+    height: 500rpx;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 2;
+}
+
+.wx-corpper-crop-box .wx-cropper-view-box {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    outline: 1px solid #3bc983;
+    outline-color: rgba(102, 153, 255, 0.75);
+}
+
+/* 横向虚线 */
+
+.wx-cropper-dashed-h {
+    position: absolute;
+    top: 33.33333333%;
+    left: 0;
+    width: 100%;
+    height: 33.33333333%;
+    border-top: 1px dashed rgba(255, 255, 255, 0.5);
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+/* 纵向虚线 */
+
+.wx-cropper-dashed-v {
+    position: absolute;
+    left: 33.33333333%;
+    top: 0;
+    width: 33.33333333%;
+    height: 100%;
+    border-left: 1px dashed rgba(255, 255, 255, 0.5);
+    border-right: 1px dashed rgba(255, 255, 255, 0.5);
+}
+
+/* 四个方向的线  为了之后的拖动事件*/
+
+.wx-cropper-line-t {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #3bc983;
+    top: 0;
+    left: 0;
+    height: 1px;
+    opacity: 0.1;
+    cursor: n-resize;
+}
+
+.wx-cropper-line-t::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0rpx;
+    width: 100%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    bottom: 0;
+    height: 41rpx;
+    background: transparent;
+    z-index: 11;
+}
+
+.wx-cropper-line-r {
+    position: absolute;
+    display: block;
+    background-color: #3bc983;
+    top: 0;
+    right: 0px;
+    width: 1px;
+    opacity: 0.1;
+    height: 100%;
+    cursor: e-resize;
+}
+
+.wx-cropper-line-r::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 41rpx;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    bottom: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 11;
+}
+
+.wx-cropper-line-b {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #3bc983;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    opacity: 0.1;
+    cursor: s-resize;
+}
+
+.wx-cropper-line-b::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0rpx;
+    width: 100%;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+    bottom: 0;
+    height: 41rpx;
+    background: transparent;
+    z-index: 11;
+}
+
+.wx-cropper-line-l {
+    position: absolute;
+    display: block;
+    background-color: #3bc983;
+    top: 0;
+    left: 0;
+    width: 1px;
+    opacity: 0.1;
+    height: 100%;
+    cursor: w-resize;
+}
+
+.wx-cropper-line-l::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 41rpx;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    bottom: 0;
+    height: 100%;
+    background: transparent;
+    z-index: 11;
+}
+
+.wx-cropper-point {
+    width: 5px;
+    height: 5px;
+    background-color: #3bc983;
+    opacity: 0.75;
+    position: absolute;
+    z-index: 3;
+}
+
+.point-t {
+    top: -3px;
+    left: 50%;
+    margin-left: -3px;
+    cursor: n-resize;
+}
+
+.point-tr {
+    top: -3px;
+    left: 100%;
+    margin-left: -3px;
+    cursor: n-resize;
+}
+
+.point-r {
+    top: 50%;
+    left: 100%;
+    margin-left: -3px;
+    margin-top: -3px;
+    cursor: n-resize;
+}
+
+.point-rb {
+    left: 100%;
+    top: 100%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    cursor: n-resize;
+    width: 24rpx;
+    height: 24rpx;
+    background-color: #3bc983;
+    position: absolute;
+    z-index: 1112;
+    opacity: 1;
+}
+
+.point-b {
+    left: 50%;
+    top: 100%;
+    margin-left: -3px;
+    margin-top: -3px;
+    cursor: n-resize;
+}
+
+.point-bl {
+    left: 0%;
+    top: 100%;
+    margin-left: -3px;
+    margin-top: -3px;
+    cursor: n-resize;
+}
+
+.point-l {
+    left: 0%;
+    top: 50%;
+    margin-left: -3px;
+    margin-top: -3px;
+    cursor: n-resize;
+}
+
+.point-lt {
+    left: 0%;
+    top: 0%;
+    margin-left: -3px;
+    margin-top: -3px;
+    cursor: n-resize;
+}
+
+/* 裁剪框预览内容 */
+
+.wx-cropper-viewer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wx-cropper-viewer image {
+    position: absolute;
+    z-index: 2;
+}

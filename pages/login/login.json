@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "游游侠",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTextStyle": "#fff",
+    "usingComponents": {
+        "authorization": "/components/authorization/authorization"
+    }
+}

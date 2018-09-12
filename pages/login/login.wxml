@@ -1,0 +1,34 @@
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机授权</button>
+<view class='travel-banner'>
+    <view class='travel-bottom-nav'>
+        <navigator class="active">登录</navigator>
+        <navigator url="../register/register" open-type="reLaunch">注册</navigator>
+    </view>
+</view>
+<view class='travel-main-part'>
+    <view class='travel-problem-account'>
+        <view class='travel-i-user account'></view>
+        <input class="inputText {{userName.length > 0 ?'bottomcolor':''}}" name='userName' value='{{userName}}' placeholder="请输入用户名/手机号" type="text" bindinput="userName" />
+    </view>
+    <view class='travel-problem-password'>
+        <view class='travel-i-user password'></view>
+        <input class="inputText {{passwordCode.length > 0 ?'bottomcolor':''}}" name='passwordCode' value='{{passwordCode}}' placeholder="请输入密码" password='true' bindinput="passwordCode" />
+    </view>
+    <view class='travel-login-help'>
+        <navigator hover-class="none" url="../forgotPassword/forgotPassword">忘记密码？</navigator>
+        <navigator hover-class="none" class='fR' url="../register/register" open-type="reLaunch">立即注册</navigator>
+    </view>
+    <view class='travel-button'>
+        <button bindtap='travel_button'>登录</button>
+    </view>
+</view>
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机授权</button>
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else>请升级微信版本</view>
+<view class='travel-logo'>
+    <image src='http://test.mxlgsl.cn/static/images/wechat/TravelLogo.png'></image>
+    <view class='text-p'>客服电话：
+        <text>13220161900</text>
+    </view>
+</view>
+<authorization id='authorization' footerSelect='0' bind:TabFooterNav="_TabFooterNav"></authorization>

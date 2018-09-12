@@ -1,0 +1,85 @@
+.authorizationMask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.authorizationBox {
+    z-index: 10000;
+    background: white;
+    border-radius: 20rpx;
+    width: 600rpx;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0, 0);
+    -webkit-transform: translate(-50%, -50%) scale(0, 0);
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(-50%, -50%) scale(0, 0);
+        -webkit-transform: translate(-50%, -50%) scale(0, 0);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) scale(1.2, 1.2);
+        -webkit-transform: translate(-50%, -50%) scale(1.2, 1.2);
+    }
+
+    90% {
+        transform: translate(-50%, -50%) scale(0.9, 0.9);
+        -webkit-transform: translate(-50%, -50%) scale(0.8, 0.8);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1, 1);
+        -webkit-transform: translate(-50%, -50%) scale(1, 1);
+    }
+}
+
+.authorizationTitle {
+    font-size: 34rpx;
+    padding-top: 40rpx;
+    line-height: 88rpx;
+    color: #222;
+    font-weight: bold;
+}
+
+.authorizationMsg {
+    font-size: 26rpx;
+    line-height: 44rpx;
+    color: #666;
+}
+
+.authorizationImage {
+    width: 540rpx;
+    height: 420rpx;
+}
+
+.authorizationBtn {
+    font-size: 30rpx;
+    max-width: 80%;
+    margin: 0 auto 40rpx;
+    padding: 10rpx;
+    border-radius: 60rpx;
+    background: -webkit-gradient(linear, left top, right top, from(#3bc983), to(#98ecbd));
+    background: -webkit-linear-gradient(left, #3bc983, #98ecbd);
+    background: linear-gradient(90deg, #3bc983, #98ecbd);
+    box-shadow: 0 8rpx 18rpx rgba(76, 207, 141, 0.2);
+    color: white;
+}

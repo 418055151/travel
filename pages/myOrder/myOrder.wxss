@@ -1,0 +1,141 @@
+page{
+    background: #f2f2f2;
+}
+.OrderList {
+    width: 100%;
+    margin-bottom: 100rpx;
+}
+.OrderList .item-list{
+    margin-bottom: 10rpx;
+}
+.OrderList .Ordernumber {
+    color: #333;
+    line-height: 70rpx;
+    padding-left:16rpx;
+    position: relative;
+    border-left: 8rpx solid #ffde9d;
+    background-image: url(https://www.mxlgsl.cn/static/images/wechat/Group1.png);
+    background-size: 100% 70rpx;
+    font-size: 28rpx;
+}
+.order-number{
+    font-family: -webkit-pictograph;
+}
+.Ordernumber text {
+    padding-right: 20rpx;
+}
+.activity-item {
+    display: block;
+    padding: 30rpx;
+    background: white;
+    position: relative;
+}
+.activity-item .item-img {
+    width: 20%;
+    height: 140rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    vertical-align: top;
+}
+.activity-item .item-img image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.activity-item .item-take {
+    width: 76%;
+    display: inline-block;
+    position: relative;
+}
+.activity-item .item-take .item-name {
+    font-size: 28rpx;
+    color: #333;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.activity-price {
+    font-size: 0;
+    zoom: 1;
+    padding-top: 18rpx;
+}
+.activity-price view {
+    line-height: 40rpx;
+}
+.activity-price text {
+    color: #858385;
+    font-size: 24rpx;
+    display: inline;
+}
+.activity-price .unit-price {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #3bc983;
+    padding-right: 10rpx;
+    vertical-align: middle;
+}
+.activity-price text.prepaid {
+    color: #3bc983;
+    padding-left: 20rpx;
+    font-size: 24rpx;
+}
+.activity-item:after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 30rpx;
+    height: 2rpx;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #e2e2e2;
+    margin-right: 30rpx;
+}
+.tool-btn {
+    background: white;
+    padding: 30rpx;
+}
+.tool-btn navigator,.tool-btn button{
+    display: inline-block;
+    font-size: 28rpx;
+    border-radius: 50rpx;
+    line-height: 48rpx;
+    padding: 4rpx 18rpx;
+    margin-left: 16rpx;
+    background: #fff;
+    border: 2rpx solid #ddd;
+    color: #999;
+}
+.tool-btn navigator.payment {
+    color: white;
+    background: #3bc983;
+    border-color: transparent;
+}
+.daifukuan {
+    color: #ff4352;
+}
+
+
+.tui-countdown-content{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 15px;
+  padding: 0 15px;
+  font-size: 18px;
+}
+.tui-conutdown-box{
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+  line-height: 26px;
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  margin: 0 5px;
+}
+.tui-countdown-bg{
+  background-color: #DF0101;
+}

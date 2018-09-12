@@ -1,0 +1,280 @@
+page{
+    background: #f2f2f2;
+}
+.activity-sponsor {
+    background-color: #ebfff5;
+    padding: 20rpx 30rpx;
+    font-weight: bold;
+    margin-bottom: 10rpx;
+}
+.activity-sponsor view {
+    text-align: left;
+    color: #333;
+    font-size: 28rpx;
+}
+.member {
+    color: #ff0000;
+    font-size: 28rpx;
+    font-weight: bold;
+    padding: 0 8rpx;
+}
+.activity-item {
+    display: block;
+    margin-bottom: 10rpx;
+    padding: 30rpx;
+    background: white;
+}
+.activity-item .item-img {
+    width: 20%;
+    height: 140rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    vertical-align: top;
+}
+.activity-item .item-img image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.activity-item .item-take {
+    width: 76%;
+    display: inline-block;
+    position: relative;
+}
+.activity-item .item-take .activity-title{
+    font-size: 28rpx;
+    color: #333;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.activity-price {
+    font-size: 0;
+    zoom: 1;
+    padding-top: 20rpx;
+}
+.activity-price view {
+    line-height: 40rpx;
+}
+.activity-price .text-span {
+    color: #858385;
+    font-size: 20rpx;
+}
+.activity-price .text-b {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #3bc983;
+    padding-right:10rpx;
+    vertical-align: middle;
+}
+.activity-price text.prepaid {
+    color: #3bc983;
+    padding-left: 20rpx;
+    font-size: 20rpx;
+}
+view.Cost-info {
+    display: block;
+    margin-bottom: 10rpx;
+    padding: 30rpx;
+    background: white;
+}
+view.Cost-info {
+    color: #999999;
+    font-size: 28rpx;
+}
+view.Cost-info .info-title{
+    margin-bottom: 10rpx;
+    color: #3bc983;
+}
+view.Cost-info .info-msg {
+    color: #000;
+    font-size: 28rpx;
+    line-height: 52rpx;
+}
+.total {
+    color: #ff0000;
+}
+.member {
+    color: #ff0000;
+    font-size: 28rpx;
+    font-weight: bold;
+    padding: 0 8px;
+}
+view.Cost-info .warmPrompt{
+    margin-top: 10rpx;
+    font-size: 24rpx;
+}
+.Payment-way {
+    display: block;
+    margin-bottom: 10rpx;
+    padding: 30rpx;
+    background: white;
+}
+.Payment-way .info-title {
+    margin-bottom: 10rpx;
+    color: #3bc983;
+    font-size: 28rpx;
+}
+.Payment-way .table-view {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    background-color: #fff;
+}
+.table-view-cell {
+    position: relative;
+    overflow: hidden;
+    padding: 22rpx 30rpx;
+    -webkit-touch-callout: none;
+    padding-right: 130rpx;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.table-view-cell .view-a{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: -22rpx -30rpx;
+    padding: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+    margin-right: -130rpx;
+    padding-left: 0;
+}
+.media-object {
+    float: left;
+    line-height: 84rpx;
+    max-width: 84rpx;
+    margin-right: 20rpx;
+    width: 84rpx;
+    height: 84rpx;
+}
+.media-body {
+    overflow: hidden;
+    font-size: 28rpx;
+    text-overflow: ellipsis;
+}
+.table-view-cell .mui-ellipsis {
+    color: #999999;
+    margin-bottom: 0;
+    font-size: 24rpx;
+    margin-top: 15rpx;
+}
+.StudyTime {
+    position: absolute;
+    top: 40rpx;
+    right: 0;
+    color: #5b5b65;
+    font-size: 28rpx;
+    background: url(https://www.mxlgsl.cn/static/images/wechat/btn-copy.png)no-repeat;
+    background-position: 0 -28px;
+    width: 28px;
+    height: 28px;
+}
+.checkbox {
+    background-position: 0 0;
+    animation: myfirst .3s ease-in-out 0s 1 alternate forwards;
+    -ms-animation: myfirst .3s ease-in-out 0s 1 alternate forwards;
+    -moz-animation: myfirst .3s ease-in-out 0s 1 alternate forwards;
+    -webkit-animation: myfirst .3s ease-in-out 0s 1 alternate forwards;
+}
+@keyframes myfirst
+{
+    0% {
+        transform: scale(1.1)
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1.1)
+    }
+}
+@-webkit-keyframes myfirst
+{
+    0% {
+        transform: scale(1.1)
+    }
+    50% {
+        transform: scale(1.2)
+    }
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+
+
+
+.commentsTool {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    -webkit-box-shadow:0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    box-shadow: 0 -4rpx 4rpx rgba(0, 0, 0, 0.217647);
+    background: #FFFFFF;
+    z-index: 990;
+    -webkit-transition: -webkit-transform .5s ease;
+    transition: -webkit-transform .5s ease;
+}
+.commentsTool .comments-options {
+    color: #302e2e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    min-height:100rpx;
+}
+.commentsTool .comments-options view {
+    text-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 32rpx;
+    line-height: 100rpx;
+}
+.totalprices {
+    font-size: 32rpx;
+    color: #3bd484;
+}
+.totalprices .text-i{
+    font-size: 44rpx;
+    vertical-align: middle;
+    padding-left: 10rpx;
+    font-family: fantasy;
+    font-weight: bold;
+}
+.commentsTool .comments-options view.say {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    color: white;
+    background-image: -webkit-linear-gradient(135deg, #acd14d, #3bd484);
+    background-image: linear-gradient(135deg, #acd14d, #3bd484);
+    font-size: 0.3103448275862069rem;
+    font-weight: bold;
+    height: 108rpx;
+    line-height: 108rpx;
+}
+.commentsTool .comments-options view.say .activityEnrollment {
+    display: block;
+    font-size: 32rpx;
+}
+.showBlock{
+    height:110rpx;
+    display:block;
+    background:#f2f2f2;
+}

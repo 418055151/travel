@@ -1,0 +1,159 @@
+.travel-banner {
+    position: relative;
+    width: 100%;
+    height: 430rpx;
+    background-image: url(https://www.mxlgsl.cn/static/images/wechat/MaskbyMask.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.travel-bottom-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    line-height: 100rpx;
+    padding: 0 22rpx;
+    font-size: 32rpx;
+    color: white;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+
+.travel-bottom-nav navigator {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    zoom: 1.1;
+    vertical-align: top;
+    opacity: 0.8;
+}
+
+.travel-bottom-nav navigator.active {
+    font-weight: bold;
+    opacity: 1;
+}
+
+.travel-bottom-nav navigator.active:before {
+    display: table;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -20rpx;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20rpx 20rpx 20rpx;
+    border-color: transparent transparent #fff transparent;
+}
+
+.travel-main-part {
+    margin: 40rpx 36rpx 0;
+}
+
+.travel-problem-account, .travel-problem-password {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+    position: relative;
+}
+
+.travel-i-user {
+    position: absolute;
+    left: 26rpx;
+    top: 32rpx;
+    height: 48rpx;
+    width: 40rpx;
+}
+
+.account {
+    background: url(https://www.mxlgsl.cn/static/images/wechat/account-icon.png) no-repeat 0 0;
+    background-size: 100%;
+}
+
+.travel-main-part input {
+    position: relative;
+    display: block;
+    border: none;
+    border-radius: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+    z-index: 10;
+    font-size: 28rpx;
+    padding: 20rpx 8rpx 8rpx 80rpx;
+    background: transparent;
+    color: #999;
+    border-bottom: 2rpx solid #e2e2e2;
+    padding-left: 80rpx;
+    height: 75rpx;
+    line-height: 75rpx;
+}
+.travel-main-part input.bottomcolor{
+    border-bottom-color: #3bc983;
+}
+.password {
+    background: url(https://www.mxlgsl.cn/static/images/wechat/password-icon.png) no-repeat 0 0;
+    background-size: 100%;
+}
+.travel-login-help {
+    color: #999;
+    font-size: 24rpx;
+    line-height: 70rpx;
+}
+.travel-login-help navigator{
+    display: inline-block;
+}
+.fR {
+    float: right;
+}
+.travel-button {
+    margin: 120rpx auto 60rpx;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+}
+.travel-button button{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    zoom: 1.1;
+    display: block;
+    background: #3bc983;
+    border-radius: 50rpx;
+    color: white;
+    line-height: 80rpx;
+    font-size: 28rpx;
+}
+.travel-logo {
+    text-align: center;
+    display: block;
+}
+.travel-logo image {
+    width: 160rpx;
+    height: 100rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+.travel-logo .text-p{
+    line-height: 64rpx;
+    font-size: 24rpx;
+    color: #999;
+}
+.travel-logo .text-p text{
+    padding-left: 16rpx;
+}

@@ -1,0 +1,65 @@
+<view class='travel-banner'>
+    <view class='travel-bottom-nav'>
+        <navigator url="../login/login" open-type="reLaunch">登录</navigator>
+        <navigator class="active">注册</navigator>
+    </view>
+</view>
+<view class='travel-main-part'>
+    <view class='travel-problem-account'>
+        <view class='travel-input-container clearfix'>
+            <text class="fL">手机号</text>
+            <input type='number' name='userName' placeholder="请输手机号" value='{{userName}}' bindinput="userName" />
+        </view>
+        <view class="travel-prompt">请输入正确的手机号</view>
+    </view>
+    <view class='travel-problem-account'>
+        <canvas class='fR travel-verification' canvas-id="canvas" bindtap="onTap"></canvas>
+        <view class="travel-input-container clearfix">
+            <text class='fL travel-Verification'>验证码</text>
+            <input type='text' bindinput='codeImg' value='{{imgCode}}' maxlength="4" placeholder="请输入图片验证码" />
+        </view>
+        <view class="travel-prompt">请输入正确的验证码</view>
+    </view>
+    <view class='travel-problem-account'>
+        <view class='fR travel-send-verification {{disabled?"":"disabled"}}' bindtap='{{disabled?"SendVerification":""}}'>{{SendVerification}}</view>
+        <view class='travel-input-container travel-marginR90 clearfix'>
+            <text class='fL travel-Verification'>手机验证码</text>
+            <input type='text' name='PhoneVerificationCode' value='{{PhoneVerificationCode}}' placeholder="请输入手机验证码" bindinput="PhoneVerificationCode" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{PhoneVerificationCodeType?"visible":"hidden"}}'>{{PhoneVerificationCodeMsg}}</view>
+    </view>
+    <view class='travel-problem-account'>
+        <view class='travel-input-container travel-marginR90 clearfix'>
+            <text class='fL travel-Verification'>用户名</text>
+            <input type='number' name='PhoneVerification' value='{{PhoneVerification}}' placeholder="请输入用户名" bindinput="PhoneVerification" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{PhoneVerificationType?"visible":"hidden"}}'>{{PhoneVerificationMsg}}</view>
+    </view>
+    <view class='travel-problem-account'>
+        <view class='travel-input-container travel-marginR90 clearfix'>
+            <text class='fL travel-Verification'>密码</text>
+            <input type='password' name='password' value='{{password}}' placeholder="6-16位的密码" password='true' bindinput="password" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{passwordType?"visible":"hidden"}}'>{{passwordMsg}}</view>
+    </view>
+    <view class='travel-problem-account'>
+        <view class='travel-input-container travel-marginR90 clearfix'>
+            <text class='fL travel-Verification'>确认密码</text>
+            <input type='password' name='confirmPassword' value='{{confirmPassword}}' placeholder="6-16位的密码" password='true' bindinput="confirmPassword" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{confirmPasswordTye?"visible":"hidden"}}'>{{confirmPasswordMsg}}</view>
+    </view>
+    <view class="travel-button">
+        <button bindtap='Register_Now'>立即注册</button>
+    </view>
+    <view class='travel-accredit'>
+        点击"立即注册",即表示您接受TFUN
+        <navigator>隐私权保护政策</navigator>
+    </view>
+</view>
+<view class="travel-logo">
+    <image src='http://test.mxlgsl.cn/static/images/wechat/TravelLogo.png'></image>
+    <view>客服电话：
+        <text>13220161900</text>
+    </view>
+</view>

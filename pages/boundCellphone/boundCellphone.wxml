@@ -1,0 +1,27 @@
+<view class="travel-main-part">
+    <view class="travel-problem-account">
+        <view class="travel-input-container clearfix">
+            <text class="fL">手机号</text>
+            <input type='number' name='cellPhone' placeholder='请输入用户名/手机号' value="{{cellPhone}}" bindinput="cellPhone" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{cellPhoneType?"visible":"hidden"}}'>{{cellPhoneMsg}}</view>
+    </view>
+    <view class="travel-problem-account">
+        <view class="fR travel-send-verification {{disabled?'':'disabled'}}" bindtap='{{disabled?"send_verification":""}}'>{{SendVerification}}</view>
+        <view class="travel-input-container travel-marginR90 clearfix">
+            <text class="fL travel-Verification">新手机号</text>
+            <input type='number' name='NewPhone' value='{{NewPhone}}' placeholder="请输入新手机号" bindinput="NewPhone" />
+        </view>
+        <view class="travel-prompt" style='visibility:{{NewPhoneType?"visible":"hidden"}}'>{{NewPhoneMsg}}</view>
+    </view>
+    <view class="travel-problem-account">
+        <view class="travel-input-container clearfix">
+            <text class="fL travel-Verification">验证码</text>
+            <input type='text' placeholder="请输入手机短信验证码" name='Verification' bindinput="Verification" />
+        </view>    
+        <view class="travel-prompt" style='visibility:{{VerificationType?"visible":"hidden"}}'>{{VerificationMsg}}</view>
+    </view>
+    <view class="travel-button">
+        <button bindtap='travel_button'>立即绑定</button>
+    </view>
+</view>
